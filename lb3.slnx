@@ -1,0 +1,14 @@
+<Solution>
+  <Project Path="lb3 task2/lb3 task2.pyproj" Type="888888a0-9f3d-457c-b088-3a5042f75d52" Id="77d2f20e-c390-4ea7-82fe-e7a9e3bc35d3">
+    <Build Project="false" />
+  </Project>
+  <Project Path="lb3 task3/lb3 task3.pyproj" Type="888888a0-9f3d-457c-b088-3a5042f75d52" Id="458fe693-a1ac-470d-91a3-572aec10e808">
+    <Build Project="false" />
+  </Project>
+  <Project Path="lb3 task4/lb3 task4.pyproj" Type="888888a0-9f3d-457c-b088-3a5042f75d52" Id="3a505aaa-fa1d-49d2-809b-500514ec9a41">
+    <Build Project="false" />
+  </Project>
+  <Project Path="lb3/lb3.pyproj" Type="888888a0-9f3d-457c-b088-3a5042f75d52" Id="3114a2fa-4ff0-490e-997d-8ae116cbce04">
+    <Build Project="false" />
+  </Project>
+</Solution>
