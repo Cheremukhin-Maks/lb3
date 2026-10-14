@@ -5,13 +5,30 @@ from typing import Union, Optional
 from app_package.exceptions.domain import BaseError, ValidationError, ResourceError, BusinessLogicError
 
 def check_balance(bal: Union[int, float]) -> None:
-    """Перевіряє баланс користувача на наявність від'ємного значення."""
+    """Перевіряє баланс користувача на наявність від'ємного значення.
+
+    Args:
+        bal: Поточний баланс користувача.
+
+    Raises:
+        ValidationError: Якщо значення балансу менше нуля.
+    """
     if bal < 0:
         raise ValidationError("Баланс не може бути від'ємним", field_name="Баланс")
     print("Баланс перевірено")
 
 def load(filename: str) -> str:
-    """Зчитує дані з текстового файлу."""
+    """Зчитує дані з текстового файлу.
+
+    Args:
+        filename: Шлях до текстового файлу.
+
+    Returns:
+        Вміст текстового файлу у вигляді рядка.
+
+    Raises:
+        ResourceError: Якщо файл не вдалося відкрити або знайти.
+    """
     try:
         with open(filename, "r", encoding="utf-8") as file:
             return file.read()
@@ -19,7 +36,17 @@ def load(filename: str) -> str:
         raise ResourceError("Не вдалося відкрити файл", resource_id=filename) from e
 
 def payment(amount: Union[int, float]) -> Optional[bool]:
-    """Виконує платіж за бізнес-логікою програми."""
+    """Виконує платіж за бізнес-логікою програми.
+
+    Args:
+        amount: Сума платежу.
+
+    Returns:
+        True, якщо платіж успішний.
+
+    Raises:
+        BusinessLogicError: Якщо сума платежу менша або дорівнює нулю.
+    """
     try:
         if amount <= 0:
             raise BusinessLogicError("Сумма платежу повинна бути більша за 0", error_code=87)
